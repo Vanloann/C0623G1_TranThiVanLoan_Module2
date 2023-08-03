@@ -2,7 +2,7 @@ package ss02_vong_lap.thuchanh;
 
 import java.util.Scanner;
 
-public class Interest {
+public class SavingsDeposit {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double money = 1.0;
