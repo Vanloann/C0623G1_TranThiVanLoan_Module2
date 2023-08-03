@@ -2,10 +2,11 @@ package ss01_introduction_to_java.baitap;
 
 import java.util.Scanner;
 
-public class Currency {
+public class CurrencyConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double usd, vnd;
+        double usd;
+        double vnd;
 
         System.out.println("Enter amount of money (USD): ");
         usd = scanner.nextDouble();
