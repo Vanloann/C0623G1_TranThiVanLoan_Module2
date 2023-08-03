@@ -35,7 +35,7 @@ public class ReadNumbers {
             int tens = remain / 10;
             int units = remain % 10;
             if (remain >= 10 && remain <= 19) {
-                System.out.println(arrHundreds[hundreds - 1] + " and " + arr10To19[tens - 1]);
+                System.out.println(arrHundreds[hundreds - 1] + " and " + arr10To19[units]);
             } else if (remain >= 1 && remain <= 9) {
                 System.out.println(arrHundreds[hundreds - 1] + " and " + arrUnits[units]);
             } else if (units == 0) {
