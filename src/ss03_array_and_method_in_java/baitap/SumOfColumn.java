@@ -2,7 +2,7 @@ package ss03_array_and_method_in_java.baitap;
 
 import java.util.Scanner;
 
-public class SumInAColumn {
+public class SumOfColumn {
     public static void main(String[] args) {
         int[][] matrix = new int[5][5];
         Scanner scanner = new Scanner(System.in);

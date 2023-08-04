@@ -2,7 +2,7 @@ package ss03_array_and_method_in_java.baitap;
 
 import java.util.Arrays;
 
-public class ArrayMerging {
+public class ArraysMerging {
     public static void main(String[] args) {
         int[] arr1 = {3, 6, 25, 8, 19, 34, 67};
         int[] arr2 = {10, 56, 37, 89, 6, 3, 0};
