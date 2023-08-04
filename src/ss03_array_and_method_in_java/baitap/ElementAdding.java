@@ -5,18 +5,28 @@ import java.util.Scanner;
 
 public class ElementAdding {
     public static void main(String[] args) {
-        int[] arr = {10, 4, 7, 34, 6, 8, 25};
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number: ");
+        int[] arr = new int[5];
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println("Enter element " + (i + 1) + ": ");
+            arr[i] = scanner.nextInt();
+        }
+        System.out.print("Elements of array: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + ", ");
+        }
+
+        System.out.println("\nEnter a number: ");
         int number = scanner.nextInt();
         System.out.println("Enter index: ");
         int index = scanner.nextInt();
 
-//    public static int[] newArray(int[] arr,int number, int index) {
+
         int[] newArr = new int[arr.length + 1];
 
         if (index <= -1 || index >= newArr.length - 1) {
             System.out.println("Cannot insert " + number + " into the array");
+            return;
         } else {
             for (int i = 0; i < index; i++) {
                 newArr[i] = arr[i];

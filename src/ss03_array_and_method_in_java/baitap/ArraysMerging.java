@@ -1,11 +1,34 @@
 package ss03_array_and_method_in_java.baitap;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArraysMerging {
     public static void main(String[] args) {
-        int[] arr1 = {3, 6, 25, 8, 19, 34, 67};
-        int[] arr2 = {10, 56, 37, 89, 6, 3, 0};
+        Scanner scanner = new Scanner(System.in);
+        int[] arr1 = new int[5];
+        System.out.println("Enter elements for array 1");
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.println("Enter element " + (i + 1) + ": ");
+            arr1[i] = scanner.nextInt();
+        }
+        System.out.print("Elements of array 1: ");
+        for (int i = 0; i < arr1.length; i++) {
+            System.out.print(arr1[i] + ", ");
+        }
+
+        int[] arr2 = new int[6];
+        System.out.println("\nEnter elements for array 2");
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.println("Enter element " + (i + 1) + ": ");
+            arr2[i] = scanner.nextInt();
+        }
+        System.out.print("Elements of array 2: ");
+        for (int i = 0; i < arr2.length; i++) {
+            System.out.print(arr2[i] + ", ");
+        }
+
+
         int[] arr3 = new int[arr1.length + arr2.length];
         int index = 0;
         for (int i = 0; i < arr1.length; i++) {
@@ -17,6 +40,7 @@ public class ArraysMerging {
             arr3[index] = arr2[i];
             index++;
         }
-        System.out.println(Arrays.toString(arr3));
+        System.out.print("Merged array: ");
+        System.out.print(Arrays.toString(arr3));
     }
 }

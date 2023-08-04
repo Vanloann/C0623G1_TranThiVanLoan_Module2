@@ -18,6 +18,7 @@ public class ElementDeleting {
             if (array[i] == number) {
                 index_del = i;
                 System.out.println("number's position: " + index_del);
+
                 for (int j = index_del; j < array.length - 1; j++) {
                     array[j] = array[j + 1];
                 }

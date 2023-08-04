@@ -2,9 +2,9 @@ package ss03_array_and_method_in_java.baitap;
 
 import java.util.Scanner;
 
-public class FrequencyOfChar {
+public class FrequencyOfCharacter {
     public static void main(String[] args) {
-        String string = "HelloAugust";
+        String string = "Hello August";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a character: ");
         char character = scanner.next().charAt(0);

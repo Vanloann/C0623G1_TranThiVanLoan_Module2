@@ -2,7 +2,7 @@ package ss03_array_and_method_in_java.baitap;
 
 import java.util.Scanner;
 
-public class MaxValueIn2DimensionalArray {
+public class MaxValueOf2DArray {
     public static void main(String[] args) {
         int[][] matrix = new int[3][3];
         Scanner scanner = new Scanner(System.in);
@@ -18,6 +18,7 @@ public class MaxValueIn2DimensionalArray {
             }
             System.out.println();
         }
+
         int max = matrix[0][0];
         int indexMaxRow = 0;
         int indexMaxCol = 0;
