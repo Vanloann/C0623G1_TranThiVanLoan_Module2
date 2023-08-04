@@ -8,13 +8,13 @@ public class First20Prime {
         System.out.println("Enter number: ");
         int number = scanner.nextInt();
         int count = 0;
-        int num = 2;
+        int prime = 2;
         boolean check;
 
         while (count < number) {
             check = true;
-            for (int i = 2; i <= num/2; i++) {
-                if (num % i == 0) {
+            for (int i = 2; i <= prime/2; i++) {
+                if (prime % i == 0) {
                     check = false;
                     break;
                 }
@@ -22,9 +22,9 @@ public class First20Prime {
 
             if (check) {
                 count++;
-                System.out.println(num);
+                System.out.println(prime);
             }
-            num++;
+            prime++;
         }
     }
 }
