@@ -1,4 +1,4 @@
-package ss04_class_and_object.bai_tap;
+package ss04_class_object.baitap;
 
 import java.util.Scanner;
 
@@ -51,22 +51,24 @@ public class QuadraticEquation {
         }
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a: ");
-        double a = scanner.nextDouble();
-        System.out.println("Enter b: ");
-        double b = scanner.nextDouble();
-        System.out.println("Enter c: ");
-        double c = scanner.nextDouble();
+    public static class Main{
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter a: ");
+            double a = scanner.nextDouble();
+            System.out.println("Enter b: ");
+            double b = scanner.nextDouble();
+            System.out.println("Enter c: ");
+            double c = scanner.nextDouble();
 
-        ss04_class_and_object.baitap.QuadraticEquation result = new ss04_class_and_object.baitap.QuadraticEquation(a, b, c);
-        if (result.getDiscriminant() > 0) {
-            System.out.println("The equation has two roots: r1 = " + result.getRoot1() + ", r2 = " + result.getRoot2());
-        } else if (result.getDiscriminant() == 0) {
-            System.out.println("The equation has one root: r1 = r2 = " + result.getRoot1());
-        } else {
-            System.out.println("The equation has no root");
+            QuadraticEquation result = new QuadraticEquation(a, b, c);
+            if (result.getDiscriminant() > 0) {
+                System.out.println("The equation has two roots: r1 = " + result.getRoot1() + ", r2 = " + result.getRoot2());
+            } else if (result.getDiscriminant() == 0) {
+                System.out.println("The equation has one root: r1 = r2 = " + result.getRoot1());
+            } else {
+                System.out.println("The equation has no root");
+            }
         }
     }
 }
