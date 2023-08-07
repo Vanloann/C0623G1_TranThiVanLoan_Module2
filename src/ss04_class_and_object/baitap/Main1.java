@@ -1,6 +1,6 @@
-package ss04_class_and_object.baitap.QuadraticEquation;
+package ss04_class_and_object.baitap;
 
-import ss04_class_and_object.baitap.QuadraticEquation.QuadraticEquation;
+import ss04_class_and_object.baitap.QuadraticEquation;
 
 import java.util.Scanner;
 

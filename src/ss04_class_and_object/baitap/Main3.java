@@ -1,6 +1,6 @@
-package ss04_class_and_object.baitap.Fan;
+package ss04_class_and_object.baitap;
 
-import ss04_class_and_object.baitap.Fan.Fan;
+import ss04_class_and_object.baitap.Fan;
 
 public class Main3 {
         public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ss04_class_and_object.baitap.Fan;
+package ss04_class_and_object.baitap;
 
 import java.util.Scanner;
 

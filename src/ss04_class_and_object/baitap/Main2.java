@@ -1,6 +1,6 @@
-package ss04_class_and_object.baitap.StopWatch;
+package ss04_class_and_object.baitap;
 
-import ss04_class_and_object.baitap.StopWatch.StopWatch;
+import ss04_class_and_object.baitap.StopWatch;
 
 public class Main2 {
     public static void main(String[] args) {
