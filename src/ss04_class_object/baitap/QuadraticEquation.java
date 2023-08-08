@@ -51,7 +51,6 @@ public class QuadraticEquation {
         }
     }
 
-    public static class Main{
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a: ");
@@ -70,5 +69,5 @@ public class QuadraticEquation {
                 System.out.println("The equation has no root");
             }
         }
-    }
+
 }
