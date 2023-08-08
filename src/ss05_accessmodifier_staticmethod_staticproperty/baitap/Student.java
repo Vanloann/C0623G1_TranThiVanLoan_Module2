@@ -1,8 +1,8 @@
 package ss05_accessmodifier_staticmethod_staticproperty.baitap;
 
 public class Student {
-    public String name = "John";
-    public String classes = "C02";
+    private String name = "John";
+    private String classes = "C02";
 
     public Student(){
     }
@@ -15,4 +15,11 @@ public class Student {
         this.classes = classes;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getClasses() {
+        return classes;
+    }
 }

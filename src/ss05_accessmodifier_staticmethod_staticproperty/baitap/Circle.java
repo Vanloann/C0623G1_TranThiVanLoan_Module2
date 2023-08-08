@@ -7,8 +7,8 @@ public class Circle {
     public Circle() {
     }
 
-    public Circle(double r) {
-        this.radius = r;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     public double getRadius() {
@@ -18,4 +18,6 @@ public class Circle {
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
+
 }
