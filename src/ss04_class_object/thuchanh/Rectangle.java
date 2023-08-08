@@ -34,7 +34,7 @@ public class Rectangle {
             System.out.println("Enter height:");
             double height = scanner.nextDouble();
 
-            ss04_class_and_object.thuchanh.Rectangle rectangle = new ss04_class_and_object.thuchanh.Rectangle(width, height);
+            Rectangle rectangle = new Rectangle(width, height);
             System.out.println("Your rectanlge \n" + rectangle.display());
             System.out.println("Perimeter of the rectangle: " + rectangle.getPerimeter());
             System.out.println("Area of the rectanlge: " + rectangle.getArea());

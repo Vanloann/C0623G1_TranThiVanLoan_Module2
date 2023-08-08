@@ -13,13 +13,13 @@ public class ElementDeleting {
 //        System.out.println(Arrays.toString(newArr));
 
 //    public static int[] ValueDeleting(int[] array, int number) {
-        int index_del = 0;
+        int indexDel = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == number) {
-                index_del = i;
-                System.out.println("number's position: " + index_del);
+                indexDel = i;
+                System.out.println("number's position: " + indexDel);
 
-                for (int j = index_del; j < array.length - 1; j++) {
+                for (int j = indexDel; j < array.length - 1; j++) {
                     array[j] = array[j + 1];
                 }
                 array[array.length - 1] = 0;
