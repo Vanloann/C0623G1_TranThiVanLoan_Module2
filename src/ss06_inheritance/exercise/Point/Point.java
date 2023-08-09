@@ -1,4 +1,6 @@
-package ss06_inheritance.exercise;
+package ss06_inheritance.exercise.Point;
+
+import java.util.Arrays;
 
 public class Point {
     private float x = 0.0f;
@@ -33,11 +35,11 @@ public class Point {
         this.setY(y);
     }
 
-    public float[] getXY() {
+    public String getXY() {
         float[] array = new float[2];
         array[0] = x;
         array[1] = y;
-        return array;
+        return Arrays.toString(array);
     }
 
     @Override

@@ -1,4 +1,6 @@
-package ss06_inheritance.exercise;
+package ss06_inheritance.exercise.Point;
+
+import java.util.Arrays;
 
 public class MoveablePoint extends Point {
     private float xSpeed = 0.0f;
@@ -40,16 +42,16 @@ public class MoveablePoint extends Point {
         this.setYSpeed(ySpeed);
     }
 
-    public float[] getSpeed() {
+    public String getSpeed() {
         float[] arr = new float[2];
         arr[0] = xSpeed;
         arr[1] = ySpeed;
-        return arr;
+        return Arrays.toString(arr);
     }
 
     @Override
     public String toString() {
-        return "(x = " + this.getX() + ", y = " + this.getY() + ")x, speed = (xSpeed = " + this.getXSpeed() + ", ySpeed = " + this.getYSpeed() + ")";
+        return "(" + this.getX() + "," + this.getY() + "), speed = (" + this.getXSpeed() + ","+ this.getYSpeed() + ")";
     }
 
     public MoveablePoint move() {

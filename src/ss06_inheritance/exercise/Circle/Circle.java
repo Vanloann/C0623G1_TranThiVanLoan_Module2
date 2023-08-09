@@ -1,4 +1,4 @@
-package ss06_inheritance.exercise;
+package ss06_inheritance.exercise.Circle;
 
 public class Circle {
     private double radius;
@@ -32,7 +32,7 @@ public class Circle {
 
     @Override
     public String toString() {
-        return "A " + this.color + " circle with radius = " + this.getRadius();
+        return "A " + getColor() + " circle with radius = " + getRadius();
     }
 
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package ss06_inheritance.exercise;
+package ss06_inheritance.exercise.Point2D;
 
 import java.util.Arrays;
 
-public class Point3D extends Point2D{
+public class Point3D extends Point2D {
     private float z = 0.0f;
 
     public Point3D() {

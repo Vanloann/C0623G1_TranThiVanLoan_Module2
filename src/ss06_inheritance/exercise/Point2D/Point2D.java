@@ -1,4 +1,4 @@
-package ss06_inheritance.exercise;
+package ss06_inheritance.exercise.Point2D;
 
 import java.util.Arrays;
 
