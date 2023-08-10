@@ -46,6 +46,7 @@ public class Square extends Geometric implements Resizeable, Colorable {
         this.setSide(this.side *= (1 + (percent/100)));
     }
 
+    //Implement interface Colorable
     @Override
     public void howToColor() {
         System.out.println("Color all four sides");

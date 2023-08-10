@@ -7,6 +7,7 @@ public class Main {
         geometric[1] = new Rectangle(10,5);
         geometric[2] = new Square(5);
 
+        //Exercise1 Resizeable
         System.out.println("Before resizing: ");
         for (Geometric shape : geometric) {
             System.out.println(shape);
@@ -19,6 +20,7 @@ public class Main {
             System.out.println(shape);
         }
 
+        //Exercise2 Colorable
         for (Geometric shape : geometric) {
             System.out.println(shape);
             if (shape instanceof Colorable) {
