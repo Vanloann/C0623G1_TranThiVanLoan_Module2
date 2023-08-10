@@ -1,4 +1,4 @@
-package ss07_abstractclass_interface.exercise.resizeable;
+package ss07_abstractclass_interface.exercise;
 
 public class Geometric implements Resizeable{
     private String color = "green";

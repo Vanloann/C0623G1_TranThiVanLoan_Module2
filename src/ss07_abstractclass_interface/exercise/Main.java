@@ -1,4 +1,4 @@
-package ss07_abstractclass_interface.exercise.resizeable;
+package ss07_abstractclass_interface.exercise;
 
 public class Main {
     public static void main(String[] args) {

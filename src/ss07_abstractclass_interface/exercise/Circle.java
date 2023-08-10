@@ -1,4 +1,4 @@
-package ss07_abstractclass_interface.exercise.resizeable;
+package ss07_abstractclass_interface.exercise;
 
 public class Circle extends Geometric implements Resizeable{
     private double radius = 1.0;
