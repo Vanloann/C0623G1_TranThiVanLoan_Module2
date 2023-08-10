@@ -1,2 +1,5 @@
-package ss07_abstractclass_interface.practice.edible;public class Edible {
+package ss07_abstractclass_interface.practice.edible;
+
+public interface Edible {
+    abstract String howToEat();
 }

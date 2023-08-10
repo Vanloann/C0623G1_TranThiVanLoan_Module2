@@ -1,2 +1,9 @@
-package ss07_abstractclass_interface.practice.fruit;public class Apple {
+package ss07_abstractclass_interface.practice.fruit;
+
+public class Apple extends Fruit{
+
+    @Override
+    public String howToEat() {
+        return "Apple juice";
+    }
 }
