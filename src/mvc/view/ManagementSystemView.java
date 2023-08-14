@@ -1,7 +1,6 @@
 package mvc.view;
 
-import mvc.controller.ManagementSystemController;
-
+import mvc.controller.TeacherController;
 import java.util.Scanner;
 
 public class ManagementSystemView {
@@ -16,18 +15,20 @@ public class ManagementSystemView {
     public  void chooseFunction() {
         int choice;
         Scanner scanner = new Scanner(System.in);
+
         showFunction();
         do {
             System.out.println("Mời bạn chọn chức năng: ");
             choice = Integer.parseInt(scanner.nextLine());
+            TeacherController msc = new TeacherController();
+            msc.managingSystem(choice);
         } while (choice >= 1 && choice <= 4);
 
         if (choice == 4) {
             System.exit(4);
         }
+        System.out.println(choice);
 
-        ManagementSystemController msc = new ManagementSystemController();
-        msc.managingSystem(choice);
 
 
     }

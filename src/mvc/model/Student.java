@@ -10,7 +10,7 @@ public class Student extends Person{
         super();
     }
 
-    public Student(int id, String name, Date dayOfBirth, String gender, String className, int point) {
+    public Student(int id, String name, String dayOfBirth, String gender, String className, int point) {
         super(id, name, dayOfBirth, gender);
         this.className = className;
         this.point = point;
@@ -30,6 +30,15 @@ public class Student extends Person{
 
     public void setPoint(int point) {
         this.point = point;
+    }
+
+
+    public void setInformation() {
+        super.setInformation();
+        System.out.println("Nhập tên lớp: ");
+        className = scanner.nextLine();
+        System.out.println("Nhập điểm: ");
+        point = scanner.nextInt();
     }
 
     @Override

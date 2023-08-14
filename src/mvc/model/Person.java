@@ -1,16 +1,17 @@
 package mvc.model;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public abstract class Person {
     private int id;
     private String name;
-    private Date dayOfBirth;
+    private String dayOfBirth;
     private String gender;
 
     public Person() {}
 
-    public Person(int id, String name, Date dayOfBirth, String gender) {
+    public Person(int id, String name, String dayOfBirth, String gender) {
         this.id = id;
         this.name = name;
         this.dayOfBirth = dayOfBirth;
@@ -33,11 +34,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public Date getDayOfBirth() {
+    public String getDayOfBirth() {
         return dayOfBirth;
     }
 
-    public void setDayOfBirth(Date dayOfBirth) {
+    public void setDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
     }
 
@@ -47,6 +48,19 @@ public abstract class Person {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    Scanner scanner = new Scanner(System.in);
+    public void setInformation() {
+//        System.out.println("Nhập id: ");
+//        id = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Nhập tên: ");
+        name = scanner.nextLine();
+        System.out.println("Nhập ngày sinh: ");
+        dayOfBirth = scanner.nextLine();
+        System.out.println("Nhập giới tính: ");
+        gender = scanner.nextLine();
     }
 
     @Override

@@ -1,5 +1,5 @@
 package mvc.service;
 
-public interface IManagementService {
+public interface ITeacherService {
     void manageInformation(int choice);
 }

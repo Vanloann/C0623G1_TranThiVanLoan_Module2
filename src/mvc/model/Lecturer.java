@@ -9,7 +9,7 @@ public class Lecturer extends Person {
         super();
     }
 
-    public Lecturer(int id, String name, Date dayOfBirth, String gender, String speciality) {
+    public Lecturer(int id, String name, String dayOfBirth, String gender, String speciality) {
         super(id,name, dayOfBirth, gender);
         this.speciality = speciality;
     }
@@ -20,6 +20,12 @@ public class Lecturer extends Person {
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
+    }
+
+    public void setInformation() {
+        super.setInformation();
+        System.out.println("Nhập chuyên ngành: ");
+        speciality = scanner.nextLine();
     }
 
     @Override
