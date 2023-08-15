@@ -1,4 +1,4 @@
-package mvc.repository.impl;
+package ss02_vong_lap.mvc.repository.impl;
 
 public class TeacherRepoImpl {
 }

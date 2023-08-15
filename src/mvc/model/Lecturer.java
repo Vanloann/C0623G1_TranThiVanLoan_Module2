@@ -1,6 +1,4 @@
-package mvc.model;
-
-import java.util.Date;
+package ss02_vong_lap.mvc.model;
 
 public class Lecturer extends Person {
     private String speciality;
@@ -22,7 +20,7 @@ public class Lecturer extends Person {
         this.speciality = speciality;
     }
 
-    public void setInformation() {
+    public void setTeacherInfor() {
         super.setInformation();
         System.out.println("Nhập chuyên ngành: ");
         speciality = scanner.nextLine();

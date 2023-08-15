@@ -1,6 +1,6 @@
-package mvc.service.impl;
+package ss02_vong_lap.mvc.service.impl;
 
-import mvc.service.IStudentService;
+import ss02_vong_lap.mvc.service.IStudentService;
 
 public class StudentServiceImpl implements IStudentService {
 

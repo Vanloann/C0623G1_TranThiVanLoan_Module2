@@ -1,6 +1,4 @@
-package mvc.model;
-
-import java.util.Date;
+package ss02_vong_lap.mvc.model;
 
 public class Student extends Person{
     private String className;
@@ -33,7 +31,7 @@ public class Student extends Person{
     }
 
 
-    public void setInformation() {
+    public void setStudentInfor() {
         super.setInformation();
         System.out.println("Nhập tên lớp: ");
         className = scanner.nextLine();

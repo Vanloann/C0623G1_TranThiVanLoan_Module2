@@ -1,6 +1,5 @@
-package mvc.model;
+package ss02_vong_lap.mvc.model;
 
-import java.util.Date;
 import java.util.Scanner;
 
 public abstract class Person {
