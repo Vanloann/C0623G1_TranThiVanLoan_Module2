@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MyList<E> {
-    private int size = 0;
+    private int size ;
     private static final int DEFAULT_CAPACITY = 10;
     private Object elements[];
 
@@ -20,7 +20,7 @@ public class MyList<E> {
     }
 
     public int size() {
-        return elements.length;
+        return size;
     }
 
     public E clone() {
@@ -33,8 +33,11 @@ public class MyList<E> {
     public void add(int index, E element) {
         if (index < 0 || index > size()) {
             throw new IndexOutOfBoundsException();
+        }
+        ensureCapacity(1);
+        if (elements.length == index) {
+            ensureCapacity(1);
         } else {
-//            ensureCapacity(3/2);
             for (int i = elements.length - 1; i > index; i--) {
                 elements[i] = elements[i - 1];
             }
@@ -45,7 +48,7 @@ public class MyList<E> {
 
     public boolean add(E e) {
         if (size == elements.length) {
-            ensureCapacity(3 / 2);
+            ensureCapacity(1);
         }
         elements[size] = e;
         size++;
@@ -69,13 +72,39 @@ public class MyList<E> {
         if (minCapacity <= 0) {
             throw new IllegalArgumentException();
         }
-        int newSize = elements.length * minCapacity;
+        int newSize = elements.length + minCapacity;
         elements = Arrays.copyOf(elements, newSize);
     }
 
     public E get(int i) {
-        return (E) elements[i];
+        if (i < 0 || i >= size()){
+            throw new IndexOutOfBoundsException();
+        } else {
+            return (E) elements[i];
+        }
     }
+
+    public void clear() {
+        for (int i = 0; i < size(); i++) {
+            elements[i] = null;
+        }
+    }
+
+//    public int indexOf(E e) {
+//        int index = -1;
+//        for (int i = 0; i < size; i++) {
+//            if (this.elements[i].equals(e)) {
+//                index = i;
+//                break;
+//            }
+//        }
+//        return index;
+//    }
+
+
+//    public boolean contains(E e) {
+//        return
+//    }
 
     @Override
     public String toString() {

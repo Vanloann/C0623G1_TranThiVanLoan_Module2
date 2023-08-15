@@ -6,9 +6,14 @@ public class MyListTest {
         System.out.println(test.size());
         test.add(0, "loan");
         test.add(1, "florence");
-        test.add("a");
+        test.add(2, "LY");
         System.out.println(test);
-        test.remove(3);
+//        System.out.println(test.get(3));
+        System.out.println(test.get(1));
+        test.remove(2);
         System.out.println(test);
+        test.clear();
+        System.out.println(test);
+
     }
 }
