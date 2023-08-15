@@ -16,8 +16,6 @@ public class ElementsReversing {
         for (int i = 0; i < array.length; i++) {
             stack.push(array[i]);
         }
-//        System.out.println("elements of stack: ");
-//        System.out.println(stack);
 
         for (int i = 0; i < array.length; i++) {
             array[i] = stack.pop();
@@ -30,8 +28,10 @@ public class ElementsReversing {
         Stack<String> stack = new Stack<>();
         String string = "wonknuehtotni";
 
+        System.out.println("Before reversing: ");
+        System.out.println(string);
         char[] arr = string.toCharArray();
-        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(arr));
 
         for (int i = 0; i < arr.length; i++) {
             stack.push(String.valueOf(arr[i]));
@@ -40,11 +40,13 @@ public class ElementsReversing {
         for (int i = 0; i < arr.length; i++) {
             str += stack.pop();
         }
+        System.out.println("After reversing: ");
         System.out.println(str);
     }
 
     public static void main(String[] args) {
-        stackOfInteger();
-        stackOfStrings();
+        ElementsReversing reverse = new ElementsReversing();
+        reverse.stackOfInteger();
+        reverse.stackOfStrings();
     }
 }
