@@ -52,12 +52,14 @@ public class ProductRepoImpl implements IProductRepo {
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                if (o1.getPrice() < o2.getPrice()) {
-                    return 1;
-                } else if (o1.getPrice() == o2.getPrice()) {
-                    return 0;
-                }
-                return -1;
+                return o1.getPrice() < o2.getPrice() ? -1 : 1;
+
+//                if (o1.getPrice() < o2.getPrice()) {
+//                    return -1;
+//                } else if (o1.getPrice() == o2.getPrice()) {
+//                    return 0;
+//                }
+//                return 1;
             }
         });
         for (Product product : products) {
@@ -70,12 +72,14 @@ public class ProductRepoImpl implements IProductRepo {
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                if (o1.getPrice() > o2.getPrice()) {
-                    return 1;
-                } else if (o1.getPrice() == o2.getPrice()) {
-                    return 0;
-                }
-                return -1;
+                return o1.getPrice() > o2.getPrice() ? -1 : 1;
+//
+//                if (o1.getPrice() > o2.getPrice()) {
+//                    return 1;
+//                } else if (o1.getPrice() == o2.getPrice()) {
+//                    return 0;
+//                }
+//                return -1;
             }
         });
         for (Product product : products) {
@@ -84,15 +88,10 @@ public class ProductRepoImpl implements IProductRepo {
     }
 
 
-
     @Override
     public void addProduct(Product product) {
         products.add(product);
     }
-
-
-
-
 
 
 }
