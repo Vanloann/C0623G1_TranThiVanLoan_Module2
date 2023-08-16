@@ -1,21 +1,27 @@
-package ss02_vong_lap.mvc.service.impl;
+package mvc.service.impl;
 
-import mvc.model.Lecturer;
-import mvc.model.Person;
-import mvc.model.Student;
-import ss02_vong_lap.mvc.service.ITeacherService;
+import mvc.model.Teacher;
+import mvc.repository.ITeacherRepository;
+import mvc.repository.impl.TeacherRepoImpl;
+import mvc.service.ITeacherService;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.List;
 
 public class TeacherServiceImpl implements ITeacherService {
 
-//    ArrayList<Person> personArrayList = new ArrayList<>();
-//    Scanner scanner = new Scanner(System.in);
-//
-//
+    private final ITeacherRepository teacherRepository = new TeacherRepoImpl();
     @Override
-    public void manageInformation(int choice) {
+    public void addTeacher(Teacher teacher) {
+        this.teacherRepository.addTeacher(teacher);
+    }
 
+    @Override
+    public void removeTeacher(int id) {
+        this.teacherRepository.removeTeacher(id);
+    }
+
+    @Override
+    public List<Teacher> getTeachers() {
+        return this.teacherRepository.getTeachers();
     }
 }

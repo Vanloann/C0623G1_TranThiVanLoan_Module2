@@ -1,12 +1,17 @@
-package ss02_vong_lap.mvc.view;
+package mvc.view;
 
-import ss02_vong_lap.mvc.controller.TeacherController;
+import mvc.controller.StudentController;
+import mvc.controller.TeacherController;
+import mvc.model.Student;
+import mvc.model.Teacher;
 
 import java.util.Scanner;
 
 public class ManagementSystemView {
     private final Scanner scanner = new Scanner(System.in);
 
+    private final StudentController studentController = new StudentController();
+    private final TeacherController teacherController = new TeacherController();
     public void showFunction() {
         System.out.println("1. Thêm mới giảng viên hoặc sinh viên");
         System.out.println("2. Xóa giảng viên hoặc sinh viên");
@@ -41,6 +46,8 @@ public class ManagementSystemView {
 
 
     public void manageInformation(int choice) {
+        Student student = new Student();
+        Teacher teacher = new Teacher();
         switch (choice) {
             case 1:
                 int option = 0;
@@ -52,6 +59,9 @@ public class ManagementSystemView {
 //                    option = scanner.nextInt();
 //                    scanner.nextLine();
                         option = Integer.parseInt(scanner.nextLine());
+                        if (option == 1) {
+                            teacher.setTeacherInfor();
+                        }
                     } catch (Exception ex) {
                         System.out.println("Dữ liệu bạn nhập bị sai");
                     }

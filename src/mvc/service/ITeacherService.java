@@ -1,5 +1,13 @@
-package ss02_vong_lap.mvc.service;
+package mvc.service;
+
+import mvc.model.Teacher;
+
+import java.util.List;
 
 public interface ITeacherService {
-    void manageInformation(int choice);
+    void addTeacher(Teacher teacher);
+
+    void removeTeacher(int id);
+
+    List<Teacher> getTeachers();
 }

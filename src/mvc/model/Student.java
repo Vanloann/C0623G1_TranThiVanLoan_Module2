@@ -1,4 +1,4 @@
-package ss02_vong_lap.mvc.model;
+package mvc.model;
 
 public class Student extends Person{
     private String className;

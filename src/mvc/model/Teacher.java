@@ -1,13 +1,13 @@
-package ss02_vong_lap.mvc.model;
+package mvc.model;
 
-public class Lecturer extends Person {
+public class Teacher extends Person {
     private String speciality;
 
-    public Lecturer() {
+    public Teacher() {
         super();
     }
 
-    public Lecturer(int id, String name, String dayOfBirth, String gender, String speciality) {
+    public Teacher(int id, String name, String dayOfBirth, String gender, String speciality) {
         super(id,name, dayOfBirth, gender);
         this.speciality = speciality;
     }
