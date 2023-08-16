@@ -61,6 +61,8 @@ public class ManagementSystemView {
                         option = Integer.parseInt(scanner.nextLine());
                         if (option == 1) {
                             teacher.setTeacherInfor();
+                        } else {
+                            student.setStudentInfor();
                         }
                     } catch (Exception ex) {
                         System.out.println("Dữ liệu bạn nhập bị sai");
