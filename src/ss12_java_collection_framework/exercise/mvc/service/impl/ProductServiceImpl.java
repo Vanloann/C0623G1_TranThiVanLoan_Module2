@@ -8,7 +8,12 @@ import java.util.ArrayList;
 
 public class ProductServiceImpl implements IProductService {
 
-    ProductRepoImpl productRepo = new ProductRepoImpl();
+    private final ProductRepoImpl productRepo = new ProductRepoImpl();
+
+    @Override
+    public void addProduct(Product product) {
+        productRepo.addProduct(product);
+    }
 
     @Override
     public ArrayList<Product> getProducts() {
@@ -26,22 +31,19 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
-    public void findProductByName(String name) {
-        productRepo.searchProductByName(name);
+    public ArrayList<Product> searchProductByName(String name) {
+        return productRepo.searchProductByName(name);
     }
 
     @Override
-    public void sortByAscendingOrder() {
-        productRepo.sortByAscendingOrder();
+    public ArrayList<Product> sortByAscendingOrder() {
+       return productRepo.sortByAscendingOrder();
     }
 
     @Override
-    public void sortByDecreasingOrder() {
-        productRepo.sortByDecreasingOrder();
+    public ArrayList<Product> sortByDescendingOrder() {
+        return productRepo.sortByDescendingOrder();
     }
 
-    @Override
-    public void addProduct(Product product) {
-        productRepo.addProduct(product);
-    }
+
 }

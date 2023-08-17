@@ -10,10 +10,15 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class ProductRepoImpl implements IProductRepo {
-    ArrayList<Product> products = new ArrayList<>();
+    private final ArrayList<Product> products = new ArrayList<>();
 
     public ArrayList<Product> getProducts() {
         return products;
+    }
+
+    @Override
+    public void addProduct(Product product) {
+         products.add(product);
     }
 
     @Override
@@ -38,60 +43,51 @@ public class ProductRepoImpl implements IProductRepo {
         System.out.println("Invalid ID");
     }
 
-    public void searchProductByName(String name) {
+    public ArrayList<Product> searchProductByName(String name) {
+        ArrayList<Product> result = new ArrayList<>();
         for (Product product : products) {
             if (product.getProductName().equals(name)) {
-                System.out.println(product);
+                result.add(product);
             }
         }
-        System.out.println("Invalid name");
+//        System.out.println("Invalid name");
+        return result;
     }
 
     @Override
-    public void sortByAscendingOrder() {
+    public ArrayList<Product> sortByAscendingOrder() {
+        ArrayList<Product> ascendingOrder = new ArrayList<>();
+
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
                 return o1.getPrice() < o2.getPrice() ? -1 : 1;
-
-//                if (o1.getPrice() < o2.getPrice()) {
-//                    return -1;
-//                } else if (o1.getPrice() == o2.getPrice()) {
-//                    return 0;
-//                }
-//                return 1;
             }
         });
         for (Product product : products) {
-            System.out.println(product);
+            ascendingOrder.add(product);
         }
+        return ascendingOrder;
     }
 
     @Override
-    public void sortByDecreasingOrder() {
+    public ArrayList<Product> sortByDescendingOrder() {
+        ArrayList<Product> decendingOrder = new ArrayList<>();
+
         Collections.sort(products, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
                 return o1.getPrice() > o2.getPrice() ? -1 : 1;
-//
-//                if (o1.getPrice() > o2.getPrice()) {
-//                    return 1;
-//                } else if (o1.getPrice() == o2.getPrice()) {
-//                    return 0;
-//                }
-//                return -1;
             }
         });
         for (Product product : products) {
-            System.out.println(product);
+            decendingOrder.add(product);
         }
+        return decendingOrder;
     }
 
 
-    @Override
-    public void addProduct(Product product) {
-        products.add(product);
-    }
+
 
 
 }

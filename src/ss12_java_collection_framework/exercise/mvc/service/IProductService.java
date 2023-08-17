@@ -6,17 +6,19 @@ import java.util.ArrayList;
 
 public interface IProductService {
     void addProduct(Product product);
-    ArrayList<Product> getProducts();
 
     void editProduct(int id,Product product);
 
     void removeProduct(int id);
 
-    void findProductByName(String name);
+    ArrayList<Product> getProducts();
 
-    void sortByAscendingOrder();
+    ArrayList<Product> searchProductByName(String name);
 
-    void sortByDecreasingOrder();
+
+    ArrayList<Product> sortByAscendingOrder();
+
+    ArrayList<Product> sortByDescendingOrder();
 
 
 }

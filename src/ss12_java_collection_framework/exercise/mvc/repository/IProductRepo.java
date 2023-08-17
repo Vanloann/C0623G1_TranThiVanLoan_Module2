@@ -9,16 +9,15 @@ public interface IProductRepo {
 
     ArrayList<Product> getProducts();
 
-
     void editProduct(int id,Product product);
 
     void removeProduct(int id);
 
-    void searchProductByName(String name);
+    ArrayList<Product> searchProductByName(String name);
 
-    void sortByAscendingOrder();
+    ArrayList<Product> sortByAscendingOrder();
 
-    void sortByDecreasingOrder();
+    ArrayList<Product> sortByDescendingOrder();
 
 }
 
