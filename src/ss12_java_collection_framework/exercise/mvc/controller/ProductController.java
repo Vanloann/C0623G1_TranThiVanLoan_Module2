@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class ProductController {
 //    ProductManager productManager = new ProductManager();
-    private final ProductServiceImpl productService = new ProductServiceImpl(); 
+    private final ProductServiceImpl productService = new ProductServiceImpl();
 
     public void addProduct(Product product) {
         this.productService.addProduct(product);

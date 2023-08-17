@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class ProductManager {
     private final Scanner scanner = new Scanner(System.in);
-    private Product product = new Product();
 
     private final ProductController productController = new ProductController();
 
@@ -77,6 +76,7 @@ public class ProductManager {
     }
 
     public Product inputProduct() {
+        Product product = new Product();
         System.out.println("Enter ID of product: ");
         product.setId(Integer.parseInt(scanner.nextLine()));
         System.out.println("Enter name of product: ");
