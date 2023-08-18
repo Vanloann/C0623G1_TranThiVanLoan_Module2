@@ -25,17 +25,8 @@ public class LongestString {
                 max.clear();
                 max.addAll(list);
             }
+            System.out.println(list);
         }
-//        for (int i = 0; i < string.length(); i++) {
-//            if (list.size() > 1 && string.charAt(i) <= list.getLast() && list.contains(string.charAt(i))) {
-//                list.clear();
-//            }
-//            list.add(string.charAt(i));
-//            if (list.size() > max.size()) {
-//                max.clear();
-//                max.addAll(list);
-//            }
-//        }
         System.out.println();
         for (Character chaz : max) {
             System.out.print(chaz);
