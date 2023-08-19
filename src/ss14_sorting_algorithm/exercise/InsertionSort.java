@@ -17,11 +17,9 @@ public class InsertionSort {
             x = list[i];
             j = i - 1;
             while (j >= 0 && list[j] > x) {
-                System.out.println("Swap " + list[j] + " with " + list[j + 1]);
                 list[j + 1] = list[j];
                 j--;
             }
-            System.out.println("Swap " + x + " with " + list[j + 1]);
             list[j + 1] = x;
         }
     }
