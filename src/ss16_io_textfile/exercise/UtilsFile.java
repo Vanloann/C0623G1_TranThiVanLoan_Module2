@@ -63,4 +63,30 @@ public class UtilsFile {
             }
         }
     }
+
+
+//    public static List<String> parseCsvLine(String countriesString) {
+//        List<String> countries = new ArrayList<>();
+//        if (countriesString != null) {
+//            String[] country = countriesString.split(COMMA);
+//            for (int i = 0; i < country.length; i++) {
+//                countries.add(country[i]);
+//            }
+//        }
+//        return countries;
+//    }
+//
+//    public static List<String> convertToString(List<Countries> countries) {
+//        List<String> countriesString = new ArrayList<>();
+//        for (Countries country : countries) {
+//            countriesString.add(country.getId() + COMMA + country.getCode() + COMMA + country.getName());
+//        }
+//        return countriesString;
+//    }
+//
+//    public static void printCountry(List<String> countries) {
+//        Countries country = new Countries();
+//        System.out.println(country.getId() + COMMA + country.getCode() + COMMA + country.getName());
+//    }
+
 }
