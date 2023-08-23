@@ -50,7 +50,7 @@ public class ProductManagement {
                     this.productController.addProduct(inputProduct());
                     break;
                 case 2:
-                    System.out.println(productController.displayProduct());
+                    System.out.println(this.productController.displayProduct());
                     break;
                 case 3:
                     System.out.println(this.productController.searchProduct(this.inputName()));

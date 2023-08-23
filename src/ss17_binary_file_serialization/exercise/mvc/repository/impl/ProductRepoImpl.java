@@ -8,18 +8,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRepoImpl implements IProductRepo {
-    private final String data = "D:\\C0623G1_LoanTTV_Module2\\untitled\\src\\ss17_binary_file_serialization\\exercise\\product.txt";
+    private final String PATH = "D:\\C0623G1_LoanTTV_Module2\\untitled\\src\\ss17_binary_file_serialization\\exercise\\mvc\\product.txt";
 
     @Override
     public void addProduct(Product product) {
         List<Product> productList = this.displayProduct();
         productList.add(product);
-        UtilsFile.writeFile(data, productList);
+        UtilsFile.writeFile(PATH, productList);
     }
 
     @Override
     public List<Product> displayProduct() {
-        List<Product> productList = UtilsFile.readFile(data);
+        List<Product> productList = UtilsFile.readFile(PATH);
         return productList;
     }
 
