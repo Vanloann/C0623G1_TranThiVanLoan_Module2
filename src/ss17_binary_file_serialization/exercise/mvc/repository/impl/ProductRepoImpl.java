@@ -28,7 +28,7 @@ public class ProductRepoImpl implements IProductRepo {
         List<Product> products = this.displayProduct();
         List<Product> result = new ArrayList<>();
         for (Product product : products) {
-            if (product.getName().startsWith(name)) {
+            if (product.getName().contains(name)) {
                 result.add(product);
             }
         }
