@@ -1,4 +1,9 @@
 package mvc.repository;
 
-public interface IContractRepository {
+import mvc.model.Contract;
+import mvc.service.IService;
+
+public interface IContractRepository extends IRepository <Contract> {
+    void editContracts();
+
 }

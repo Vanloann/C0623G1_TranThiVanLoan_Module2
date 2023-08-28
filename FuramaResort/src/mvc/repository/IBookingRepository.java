@@ -1,4 +1,8 @@
 package mvc.repository;
 
-public interface IBookingRepository {
+import mvc.model.Booking;
+import mvc.service.IService;
+
+public interface IBookingRepository extends IRepository <Booking> {
+
 }

@@ -5,7 +5,7 @@ import mvc.model.person.Employee;
 import java.util.List;
 
 public interface IEmployeeService extends IService<Employee> {
-    void edit();
+    void edit(String id, Employee employee);
 
-    List<Employee> searchByName();
+    List<Employee> searchByName(String name);
 }

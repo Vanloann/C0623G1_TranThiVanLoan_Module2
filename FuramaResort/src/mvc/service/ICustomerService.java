@@ -1,4 +1,12 @@
 package mvc.service;
 
-public interface ICustomerService {
+import mvc.model.person.Customer;
+
+import java.util.List;
+
+public interface ICustomerService extends IService<Customer> {
+    void  edit();
+
+    List<Customer> searchByName();
+
 }

@@ -1,4 +1,23 @@
 package mvc.service.impl;
 
-public class BookingServiceImpl {
+import mvc.model.Booking;
+import mvc.service.IBookingService;
+
+import java.util.List;
+
+public class BookingServiceImpl implements IBookingService {
+    @Override
+    public void add(Booking booking) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+    }
+
+    @Override
+    public List<Booking> display() {
+        return null;
+    }
 }

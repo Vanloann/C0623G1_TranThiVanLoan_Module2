@@ -1,4 +1,7 @@
 package mvc.service;
 
-public interface IBookingService {
+import mvc.model.Booking;
+
+public interface IBookingService extends IService<Booking> {
+
 }

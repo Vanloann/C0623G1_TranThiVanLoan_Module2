@@ -1,4 +1,11 @@
 package mvc.service;
 
-public interface IContractService {
+import mvc.model.Contract;
+
+import java.util.List;
+
+public interface IContractService extends IService<Contract>{
+
+    void editContracts();
+
 }

@@ -1,4 +1,30 @@
 package mvc.service.impl;
 
-public class ContractServiceImpl {
+import mvc.model.Contract;
+import mvc.service.IContractService;
+
+import java.util.List;
+
+public class ContractServiceImpl implements IContractService {
+
+
+    @Override
+    public void editContracts() {
+
+    }
+
+    @Override
+    public void add(Contract contract) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+    }
+
+    @Override
+    public List<Contract> display() {
+        return null;
+    }
 }

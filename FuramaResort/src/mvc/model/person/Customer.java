@@ -8,6 +8,8 @@ public class Customer extends Person {
 
     //typeOfCustomer (Diamond, Platinum, Gold, Silver, Member)
 
+    public Customer() {}
+
     public Customer(String typeOfCustomer, String address) {
         this.typeOfCustomer = typeOfCustomer;
         this.address = address;

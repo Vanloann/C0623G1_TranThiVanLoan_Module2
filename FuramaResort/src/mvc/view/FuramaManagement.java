@@ -1,9 +1,20 @@
 package mvc.view;
 
+import mvc.controller.EmployeeController;
+import mvc.model.person.Employee;
+
+import java.util.List;
 import java.util.Scanner;
 
 public class FuramaManagement {
     private final Scanner scanner = new Scanner(System.in);
+
+// Singleton
+//    private static final FuramaManagement furamaManagement =new FuramaManagement();
+//
+//    public static FuramaManagement getInstance() {
+//        return furamaManagement;
+//    }
     public void displayMainMenu() {
         System.out.println("---------MENU---------");
         System.out.println("1.\tEmployee Management");
@@ -35,15 +46,12 @@ public class FuramaManagement {
         int option = 0;
         do {
             try {
-                System.out.println("Please enter service: ");
+                System.out.println("Please enter option: ");
                 option = Integer.parseInt(scanner.nextLine());
             } catch (Exception e) {
                 System.out.println("Invalid option!");
             }
         } while (option < 1 || option > 6);
-        if(option == 6) {
-            this.displayMainMenu();
-        }
         return option;
     }
 
@@ -51,7 +59,7 @@ public class FuramaManagement {
         int option = 0;
         do {
             try {
-                System.out.println("Please enter service: ");
+                System.out.println("Please enter option: ");
                 option = Integer.parseInt(scanner.nextLine());
             } catch (Exception e) {
                 System.out.println("Invalid option!");
@@ -67,7 +75,7 @@ public class FuramaManagement {
         int option = 0;
         do {
             try {
-                System.out.println("Please enter service: ");
+                System.out.println("Please enter option: ");
                 option = Integer.parseInt(scanner.nextLine());
             } catch (Exception e) {
                 System.out.println("Invalid option!");
@@ -77,17 +85,6 @@ public class FuramaManagement {
             this.displayMainMenu();
         }
         return option;
-    }
-
-
-    public void displayEmployeeManagement() {
-        System.out.println("---------EMPLOYEE_MENU---------");
-        System.out.println("1.\tDisplay List Employees");
-        System.out.println("2.\tAdd new employee");
-        System.out.println("3.\tEdit employee");
-        System.out.println("4.\tDelete employee");
-        System.out.println("5.\tSearch by name employee");
-        System.out.println("6.\tReturn main menu");
     }
 
     public void displayCustomerManagement() {
@@ -126,5 +123,31 @@ public class FuramaManagement {
         System.out.println("3.\tReturn main menu");
     }
 
+    public int inputID() {
+        System.out.println("Please enter ID: ");
+        return Integer.parseInt(scanner.nextLine());
+    }
 
+    public String inputName() {
+        System.out.println("Please enter name:");
+        return scanner.nextLine();
+    }
+
+
+    public void manage() {
+        int choice;
+        do {
+            choice = this.chooseFunction();
+            switch (choice) {
+                case 1:
+                    EmployeeView employeeView = new EmployeeView();
+                    employeeView.renderEmployee();
+                    break;
+                case 2:
+                    CustomerView customerView = new CustomerView();
+
+
+            }
+        } while (choice != 4);
+    }
 }
