@@ -19,7 +19,7 @@ public class ContractServiceImpl implements IContractService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
 
     }
 

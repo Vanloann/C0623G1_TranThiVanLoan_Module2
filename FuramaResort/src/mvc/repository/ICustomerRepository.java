@@ -6,7 +6,7 @@ import mvc.service.IService;
 import java.util.List;
 
 public interface ICustomerRepository extends IRepository<Customer> {
-    void  edit();
+    void  edit(String id, Customer customer);
 
-    List<Customer> searchByName();
+    List<Customer> searchByName(String name);
 }

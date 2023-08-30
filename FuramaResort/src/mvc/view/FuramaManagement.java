@@ -87,15 +87,6 @@ public class FuramaManagement {
         return option;
     }
 
-    public void displayCustomerManagement() {
-        System.out.println("---------CUSTOMER_MENU---------");
-        System.out.println("1.\tDisplay List customers");
-        System.out.println("2.\tAdd new customer");
-        System.out.println("3.\tEdit customer");
-        System.out.println("4.\tDelete customer");
-        System.out.println("5.\tSearch by name customer");
-        System.out.println("6.\tReturn main menu");
-    }
 
     public void displayFacilityManagement() {
         System.out.println("---------FACILITY_MENU---------");
@@ -123,15 +114,15 @@ public class FuramaManagement {
         System.out.println("3.\tReturn main menu");
     }
 
-    public int inputID() {
-        System.out.println("Please enter ID: ");
-        return Integer.parseInt(scanner.nextLine());
-    }
-
-    public String inputName() {
-        System.out.println("Please enter name:");
-        return scanner.nextLine();
-    }
+//    public int inputID() {
+//        System.out.println("Please enter ID: ");
+//        return Integer.parseInt(scanner.nextLine());
+//    }
+//
+//    public String inputName() {
+//        System.out.println("Please enter name:");
+//        return scanner.nextLine();
+//    }
 
 
     public void manage() {
@@ -145,8 +136,13 @@ public class FuramaManagement {
                     break;
                 case 2:
                     CustomerView customerView = new CustomerView();
-
-
+                    customerView.renderCustomer();
+                    break;
+                case 6:
+                    System.exit(6);
+                default:
+                    System.out.println("Invalid choice");
+                    break;
             }
         } while (choice != 4);
     }

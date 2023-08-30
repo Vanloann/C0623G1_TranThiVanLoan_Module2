@@ -18,7 +18,7 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
 
     }
 

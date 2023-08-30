@@ -12,10 +12,9 @@ public class BookingRepositoryImpl implements IBookingRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
 
     }
-
 
     @Override
     public List<Booking> display() {

@@ -17,7 +17,7 @@ public class FacilityServiceImpl implements IFacilityService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
 
     }
 

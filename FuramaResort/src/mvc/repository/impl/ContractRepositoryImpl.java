@@ -17,7 +17,7 @@ public class ContractRepositoryImpl implements IContractRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
 
     }
 
