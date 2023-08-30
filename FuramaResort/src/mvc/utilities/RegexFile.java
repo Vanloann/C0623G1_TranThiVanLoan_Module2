@@ -17,10 +17,7 @@ public class RegexFile {
     public static final String EDUCATION_LEVEL_REGEX = "Intermediate Degree|College Degree|Bachelor's Degree|Postgraduate Degree";
     public static final String POSITION_REGEX = "Receptionist|Waiter|Specialist|Supervisor|Manager|Director";
     public static final String CUSTOMER_ID_REGEX = "^KH-\\d{4}$";
-
-    public static final String TYPE_OF_CUSTOMER_REGEX = "Diamond|Platinum|Gold|Silver|Member";
-
-
+    public static final String CUSTOMER_CLASS_REGEX = "Diamond|Platinum|Gold|Silver|Member";
 
     private static Pattern pattern;
 
@@ -114,11 +111,11 @@ public class RegexFile {
         return validate(position, POSITION_REGEX);
     }
 
-    public boolean validateTypeOfCustomer(String type) {
-        if (!validate(type, TYPE_OF_CUSTOMER_REGEX)) {
+    public boolean validateCustomerCLass(String type) {
+        if (!validate(type, CUSTOMER_CLASS_REGEX)) {
             System.out.println("Invalid type! Please enter again.");
         }
-        return validate(type, TYPE_OF_CUSTOMER_REGEX);
+        return validate(type, CUSTOMER_CLASS_REGEX);
     }
 
 

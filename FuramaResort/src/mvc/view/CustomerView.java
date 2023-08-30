@@ -1,9 +1,9 @@
 package mvc.view;
 
 import mvc.controller.CustomerController;
-import mvc.controller.EmployeeController;
+
 import mvc.model.person.Customer;
-import mvc.model.person.Employee;
+
 import mvc.utilities.RegexFile;
 
 import java.util.List;
@@ -19,7 +19,7 @@ public class CustomerView {
 
     public void displayCustomerManagement() {
         System.out.println("---------CUSTOMER_MENU---------");
-        System.out.println("1.\tDisplay List customers");
+        System.out.println("1.\tDisplay customers' list");
         System.out.println("2.\tAdd new customer");
         System.out.println("3.\tEdit customer");
         System.out.println("4.\tDelete customer");
@@ -85,12 +85,12 @@ public class CustomerView {
         } while (!regexFile.validateEmail(email));
         customer.setEmail(email);
 
-        String typeOfCustomer;
+        String customerClass;
         do {
-            System.out.println("Enter type of customer (Diamond/ Platinum/ Gold/ Silver/ Member): ");
-            typeOfCustomer = scanner.nextLine();
-        } while (!regexFile.validateTypeOfCustomer(typeOfCustomer));
-        customer.setTypeOfCustomer(typeOfCustomer);
+            System.out.println("Enter customer class (Diamond/ Platinum/ Gold/ Silver/ Member): ");
+            customerClass = scanner.nextLine();
+        } while (!regexFile.validateCustomerCLass(customerClass));
+        customer.setCustomerClass(customerClass);
 
         System.out.println("Enter address of customer: ");
         String address = scanner.nextLine();
@@ -147,16 +147,16 @@ public class CustomerView {
             email = scanner.nextLine();
         } while (!regexFile.validateEmail(email));
 
-        String typeOfCustomer;
+        String customerClass;
         do {
-            System.out.println("Enter new type of customer (Diamond/ Platinum/ Gold/ Silver/ Member): ");
-            typeOfCustomer = scanner.nextLine();
-        } while (!regexFile.validateTypeOfCustomer(typeOfCustomer));
+            System.out.println("Enter new customer class (Diamond/ Platinum/ Gold/ Silver/ Member): ");
+            customerClass = scanner.nextLine();
+        } while (!regexFile.validateCustomerCLass(customerClass));
 
         System.out.println("Enter new address of customer: ");
         String address = scanner.nextLine();
 
-        return new Customer(id, name, dayOfBirth, gender, citizenId, phoneNumber, email, typeOfCustomer, address);
+        return new Customer(id, name, dayOfBirth, gender, citizenId, phoneNumber, email, customerClass, address);
     }
 
     public String inputCustomerId () {
@@ -232,7 +232,7 @@ public class CustomerView {
                 System.out.println(this.customerController.searchByName(this.inputName()));
                 break;
             case 6:
-                furamaManagement.chooseFunction();
+                furamaManagement.manage();
                 break;
             default:
                 System.out.println("Invalid option!");

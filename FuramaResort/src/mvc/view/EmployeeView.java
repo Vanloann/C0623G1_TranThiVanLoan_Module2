@@ -232,38 +232,38 @@ public class EmployeeView {
     }
 
     public void renderEmployee() {
-        this.displayEmployeeManagement();
-        int option = furamaManagement.chooseService();
-        switch (option) {
-            case 1:
-                List<Employee> employees = this.employeeController.display();
-                for (Employee employee : employees) {
-                    System.out.println(employee);
-                }
-                break;
-            case 2:
-                this.employeeController.add(this.inputEmployee());
-                System.out.println("Successfully added Employee ^^");
-                break;
-            case 3:
-                this.employeeController.edit(this.inputEmployeeId(),
-                        this.inputNewInfor());
-                System.out.println("Successfully edited Employee ^^");
-                break;
-            case 4:
-                this.employeeController.delete(this.inputEmployeeId());
-                System.out.println("Successfully deleted Employee ^^");
-                break;
-            case 5:
-                System.out.println(this.employeeController.searchByName(this.inputName()));
-                break;
-            case 6:
-                furamaManagement.chooseFunction();
-                break;
-            default:
-                System.out.println("Invalid option!");
-                break;
-        }
+            this.displayEmployeeManagement();
+            int option = furamaManagement.chooseService();
+            switch (option) {
+                case 1:
+                    List<Employee> employees = this.employeeController.display();
+                    for (Employee employee : employees) {
+                        System.out.println(employee);
+                    }
+                    break;
+                case 2:
+                    this.employeeController.add(this.inputEmployee());
+                    System.out.println("Successfully added Employee ^^");
+                    break;
+                case 3:
+                    this.employeeController.edit(this.inputEmployeeId(),
+                            this.inputNewInfor());
+                    System.out.println("Successfully edited Employee ^^");
+                    break;
+                case 4:
+                    this.employeeController.delete(this.inputEmployeeId());
+                    System.out.println("Successfully deleted Employee ^^");
+                    break;
+                case 5:
+                    System.out.println(this.employeeController.searchByName(this.inputName()));
+                    break;
+                case 6:
+                    furamaManagement.manage();
+                    break;
+                default:
+                    System.out.println("Invalid option!");
+                    break;
+            }
         this.renderEmployee();
     }
 }

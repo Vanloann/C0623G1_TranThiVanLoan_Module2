@@ -1,10 +1,7 @@
 package mvc.repository.impl;
-
 import mvc.model.person.Customer;
-import mvc.model.person.Employee;
 import mvc.repository.ICustomerRepository;
 import mvc.utilities.UtilsFile;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +48,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
                 data.setCitizenID(customer.getCitizenID());
                 data.setPhoneNumber(customer.getPhoneNumber());
                 data.setEmail(customer.getEmail());
-                data.setTypeOfCustomer(customer.getTypeOfCustomer());
+                data.setCustomerClass(customer.getCustomerClass());
                 data.setAddress(customer.getAddress());
                 return;
             }
@@ -101,7 +98,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
                     customer.getCitizenID() + COMMA +
                     customer.getPhoneNumber() + COMMA +
                     customer.getEmail() + COMMA +
-                    customer.getTypeOfCustomer() + COMMA +
+                    customer.getCustomerClass() + COMMA +
                     customer.getAddress());
         }
         return strings;

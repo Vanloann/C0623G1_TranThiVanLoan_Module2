@@ -88,14 +88,7 @@ public class FuramaManagement {
     }
 
 
-    public void displayFacilityManagement() {
-        System.out.println("---------FACILITY_MENU---------");
-        System.out.println("1.\tDisplay List facility");
-        System.out.println("2.\tAdd new facility");
-        System.out.println("3.\tDisplay list facility maintenance");
-        System.out.println("4.\tDelete facility");
-        System.out.println("5.\tReturn main menu");
-    }
+
 
     public void displayBookingManagement() {
         System.out.println("---------BOOKING_MENU---------");
@@ -113,17 +106,6 @@ public class FuramaManagement {
         System.out.println("2.\tDisplay list customers get voucher");
         System.out.println("3.\tReturn main menu");
     }
-
-//    public int inputID() {
-//        System.out.println("Please enter ID: ");
-//        return Integer.parseInt(scanner.nextLine());
-//    }
-//
-//    public String inputName() {
-//        System.out.println("Please enter name:");
-//        return scanner.nextLine();
-//    }
-
 
     public void manage() {
         int choice;

@@ -1,33 +1,31 @@
 package mvc.model.person;
 
-import mvc.model.person.Person;
-
 public class Customer extends Person {
-    private String typeOfCustomer;
+    private String customerClass;
     private String address;
 
-    //typeOfCustomer (Diamond, Platinum, Gold, Silver, Member)
+    //customerClass (Diamond, Platinum, Gold, Silver, Member)
 
     public Customer() {}
 
-    public Customer(String typeOfCustomer, String address) {
-        this.typeOfCustomer = typeOfCustomer;
+    public Customer(String customerClass, String address) {
+        this.customerClass = customerClass;
         this.address = address;
     }
 
     public Customer(String id, String name, String dayOfBirth, String gender, String citizenID,
-                    String phoneNumber, String email, String typeOfCustomer, String address) {
+                    String phoneNumber, String email, String customerClass, String address) {
         super(id, name, dayOfBirth, gender, citizenID, phoneNumber, email);
-        this.typeOfCustomer = typeOfCustomer;
+        this.customerClass = customerClass;
         this.address = address;
     }
 
-    public String getTypeOfCustomer() {
-        return typeOfCustomer;
+    public String getCustomerClass() {
+        return customerClass;
     }
 
-    public void setTypeOfCustomer(String typeOfCustomer) {
-        this.typeOfCustomer = typeOfCustomer;
+    public void setCustomerClass(String customerClass) {
+        this.customerClass = customerClass;
     }
 
     public String getAddress() {
@@ -40,9 +38,8 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "Customer {" + super.toString() +
-                "TypeOfCustomer: '" + typeOfCustomer + '\'' +
-                ", Address: '" + address + '\'' +
-                '}';
+        return "CUSTOMER's " + super.toString() +
+                " | Customer class: " + customerClass +
+                " | Address: " + address + "\n";
     }
 }
