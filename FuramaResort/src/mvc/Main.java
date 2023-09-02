@@ -6,5 +6,9 @@ public class Main {
     public static void main(String[] args) {
         FuramaManagement furamaManagement = new FuramaManagement();
         furamaManagement.manage();
+
+
+
+
     }
 }

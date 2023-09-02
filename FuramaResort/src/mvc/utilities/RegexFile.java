@@ -18,6 +18,10 @@ public class RegexFile {
     public static final String POSITION_REGEX = "Receptionist|Waiter|Specialist|Supervisor|Manager|Director";
     public static final String CUSTOMER_ID_REGEX = "^KH-\\d{4}$";
     public static final String CUSTOMER_CLASS_REGEX = "Diamond|Platinum|Gold|Silver|Member";
+    public static final String VILLA_ID_REGEX = "^SVVL-\\d{4}$";
+    public static final String HOUSE_ID_REGEX = "^SVHO-\\d{4}$";
+    public static final String ROOM_ID_REGEX = "^SVRO-\\d{4}$";
+    public static final String SERVICE_NAME = "Villa|House|Room";
 
     private static Pattern pattern;
 
@@ -118,5 +122,31 @@ public class RegexFile {
         return validate(type, CUSTOMER_CLASS_REGEX);
     }
 
+    public boolean validateVilla(String villa) {
+        if (!validate(villa, VILLA_ID_REGEX)) {
+            System.out.println("Invalid Villa Id! Please enter again.");
+        }
+        return validate(villa, VILLA_ID_REGEX);
+    }
 
+    public boolean validateHouse(String house) {
+        if (!validate(house, HOUSE_ID_REGEX)) {
+            System.out.println("Invalid House Id! Please enter again.");
+        }
+        return validate(house, HOUSE_ID_REGEX);
+    }
+
+    public boolean validateRoom(String room) {
+        if (!validate(room, ROOM_ID_REGEX)) {
+            System.out.println("Invalid Room Id! Please enter again.");
+        }
+        return validate(room, ROOM_ID_REGEX);
+    }
+
+    public boolean validateServiceName(String service) {
+        if (!validate(service, SERVICE_NAME)) {
+            System.out.println("Invalid service name! Please enter again.");
+        }
+        return validate(service, SERVICE_NAME);
+    }
 }

@@ -1,32 +1,30 @@
 package mvc.model.facility;
 
-import mvc.model.facility.Facility;
-
 public class Room extends Facility {
-    private String accompaniedFreeService;
+    private String accompanyingFreeService;
 
-    public Room(String accompaniedFreeService) {
-        this.accompaniedFreeService = accompaniedFreeService;
+    public Room(String accompanyingFreeService) {
+        this.accompanyingFreeService = accompanyingFreeService;
     }
 
-    public Room(int id, String name, double area, double price, int capacity,
-                String rentalTime, String accompaniedFreeService) {
-        super(id, name, area, price, capacity, rentalTime);
-        this.accompaniedFreeService = accompaniedFreeService;
+    public Room() {}
+    public Room(String id, String service, double area, double rental, int capacity,
+                String rentPeriod, String accompanyingFreeService) {
+        super(id, service, area, rental, capacity, rentPeriod);
+        this.accompanyingFreeService = accompanyingFreeService;
     }
 
-    public String getAccompaniedFreeService() {
-        return accompaniedFreeService;
+    public String getAccompanyingFreeService() {
+        return accompanyingFreeService;
     }
 
-    public void setAccompaniedFreeService(String accompaniedFreeService) {
-        this.accompaniedFreeService = accompaniedFreeService;
+    public void setAccompanyingFreeService(String accompanyingFreeService) {
+        this.accompanyingFreeService = accompanyingFreeService;
     }
 
     @Override
     public String toString() {
-        return "Room {" + super.toString() +
-                "accompaniedFreeService='" + accompaniedFreeService + '\'' +
-                '}';
+        return  "ROOM " + super.toString() +
+                " | AccompanyingFreeService: " + accompanyingFreeService + "\n";
     }
 }

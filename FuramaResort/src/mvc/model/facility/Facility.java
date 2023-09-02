@@ -1,41 +1,41 @@
 package mvc.model.facility;
 
 public abstract class Facility {
-    private int id;
-    private String name;
+    private String id;
+    private String service;
     private double area;
-    private double price;
+    private double rental;
     private int capacity;
-    private String rentalTime;
+    private String rentPeriod;
 
-    // rentalTime (by year, month, day, hour)
+    // rentPeriod (by year, month, day, hour)
 
     public Facility() {}
 
-    public Facility(int id, String name, double area, double price,
-                    int capacity, String rentalTime) {
+    public Facility(String id, String service, double area, double rental,
+                    int capacity, String rentPeriod) {
         this.id = id;
-        this.name = name;
+        this.service = service;
         this.area = area;
-        this.price = price;
+        this.rental = rental;
         this.capacity = capacity;
-        this.rentalTime = rentalTime;
+        this.rentPeriod = rentPeriod;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getService() {
+        return service;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setService(String service) {
+        this.service = service;
     }
 
     public double getArea() {
@@ -46,12 +46,12 @@ public abstract class Facility {
         this.area = area;
     }
 
-    public double getPrice() {
-        return price;
+    public double getRental() {
+        return rental;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setRental(double rental) {
+        this.rental = rental;
     }
 
     public int getCapacity() {
@@ -62,23 +62,21 @@ public abstract class Facility {
         this.capacity = capacity;
     }
 
-    public String getRentalTime() {
-        return rentalTime;
+    public String getRentPeriod() {
+        return rentPeriod;
     }
 
-    public void setRentalTime(String rentalTime) {
-        this.rentalTime = rentalTime;
+    public void setRentPeriod(String rentPeriod) {
+        this.rentPeriod = rentPeriod;
     }
 
     @Override
     public String toString() {
-        return "Facility{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", area=" + area +
-                ", price=" + price +
-                ", capacity=" + capacity +
-                ", rentalTime='" + rentalTime + '\'' +
-                '}';
+        return " Id: " + id +
+                " | Name: " + service +
+                " | Area: " + area +
+                " | Rental: " + rental +
+                " | Capacity: " + capacity +
+                " | Rent Period: " + rentPeriod;
     }
 }

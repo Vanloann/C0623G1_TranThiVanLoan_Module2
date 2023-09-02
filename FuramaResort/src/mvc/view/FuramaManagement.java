@@ -1,9 +1,5 @@
 package mvc.view;
 
-import mvc.controller.EmployeeController;
-import mvc.model.person.Employee;
-
-import java.util.List;
 import java.util.Scanner;
 
 public class FuramaManagement {
@@ -55,21 +51,6 @@ public class FuramaManagement {
         return option;
     }
 
-    public int chooseService1() {
-        int option = 0;
-        do {
-            try {
-                System.out.println("Please enter option: ");
-                option = Integer.parseInt(scanner.nextLine());
-            } catch (Exception e) {
-                System.out.println("Invalid option!");
-            }
-        } while (option < 1 || option > 5);
-        if(option == 5) {
-            this.displayMainMenu();
-        }
-        return option;
-    }
 
     public int chooseService2() {
         int option = 0;
@@ -86,9 +67,6 @@ public class FuramaManagement {
         }
         return option;
     }
-
-
-
 
     public void displayBookingManagement() {
         System.out.println("---------BOOKING_MENU---------");
@@ -119,6 +97,10 @@ public class FuramaManagement {
                 case 2:
                     CustomerView customerView = new CustomerView();
                     customerView.renderCustomer();
+                    break;
+                case 3:
+                    FacilityView facilityView = new FacilityView();
+                    facilityView.renderFacility();
                     break;
                 case 6:
                     System.exit(6);

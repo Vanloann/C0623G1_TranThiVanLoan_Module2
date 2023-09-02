@@ -7,7 +7,7 @@ import java.util.List;
 public class UtilsFile {
     public static List<String> readFile(String filePath) {
         List<String> strings = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(new File(filePath)))){
+        try (BufferedReader br = new BufferedReader(new FileReader(new File(filePath)))) {
             String line = "";
             while ((line = br.readLine()) != null) {
                 strings.add(line);
